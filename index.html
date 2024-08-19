@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Horários e Salas de Aula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Logística de Horários e Salas de Aula</h1>
+        
+        <form id="scheduleForm" class="row g-3">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="col-md-6">
+                <label for="day" class="form-label">Dia:</label>
+                <input type="date" class="form-control" id="day" name="day" required>
+            </div>
+            <div class="col-md-6">
+                <label for="time" class="form-label">Hora:</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+            <div class="col-md-6">
+                <label for="room" class="form-label">Sala:</label>
+                <select class="form-select" id="room" name="room" required>
+                    <option value="">Selecione uma sala</option>
+                    <option value="6ºA">6ºA</option>
+                    <option value="6ºB">6ºB</option>
+                    <option value="6ºC">6ºC</option>
+                    <option value="6ºD">6ºD</option>
+                    <option value="7ºA">7ºA</option>
+                    <option value="7ºB">7ºB</option>
+                    <option value="7ºC">7ºC</option>
+                    <option value="7ºD">7ºD</option>
+                    <option value="8ºA">8ºA</option>
+                    <option value="8ºB">8ºB</option>
+                    <option value="8ºC">8ºC</option>
+                    <option value="8ºD">8ºD</option>
+                    <option value="9ºA">9ºA</option>
+                    <option value="9ºB">9ºB</option>
+                    <option value="9ºC">9ºC</option>
+                    <option value="9ºD">9ºD</option>
+                    <option value="1ºA">1ºA</option>
+                    <option value="1ºB">1ºB</option>
+                    <option value="1ºC">1ºC</option>
+                    <option value="2ºA">2ºA</option>
+                    <option value="2ºINTB">2ºINTB</option>
+                    <option value="3ºA">3ºA</option>
+                    <option value="3ºInfo">3ºInfo</option>
+                    <option value="3ºMarketing">3ºMarketing</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="teacher" class="form-label">Professor Responsável:</label>
+                <input type="text" class="form-control" id="teacher" name="teacher" required>
+            </div>
+            <div class="col-12">
+                <label for="comment" class="form-label">Comentário:</label>
+                <input type="text" class="form-control" id="comment" name="comment">
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Adicionar Horário</button>
+            </div>
+        </form>
+
+        <table class="table table-striped table-bordered mt-4" id="scheduleTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Dia</th>
+                    <th>Hora</th>
+                    <th>Sala</th>
+                    <th>Professor Responsável</th>
+                    <th>Comentário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados inseridos dinamicamente aqui -->
+            </tbody>
+        </table>
+
+        <div class="text-center">
+            <button id="saveBtn" class="btn btn-success mt-3">Salvar em TXT</button>
+            <button id="shareBtn" class="btn btn-info mt-3">Compartilhar no WhatsApp</button>
+            <a href="HORARIO  ESCOLAR  2024  S 2.xlsx" class="btn btn-warning mt-3" target="_blank">Horários dos Professores</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
